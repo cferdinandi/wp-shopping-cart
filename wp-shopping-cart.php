@@ -12,7 +12,10 @@
 
     HOW TO USE
 
-    1. Replace the variables with your information:
+    1. Add wp-shopping-cart.php to your theme folder and call it from your functions.php file, 
+       or copy-and-paste it directly into the file.
+
+    2. Replace the variables with your information:
         * $paypal_account - Your PayPal email address
         * $cart_icon - An icon for your shopping cart link, if you have one
         * $url_store - The URL of your store
@@ -21,7 +24,7 @@
         * $url_success - The meta info/URL when the checkout is successful
         * Shipping variables - Based on shopping cart subtotal value
 
-    2. Include an "Add to Cart" link using the [add_to_cart] shortcode.
+    3. Include an "Add to Cart" link using the [add_to_cart] shortcode.
        Shortcode variables:
         * product="PRODUCT NAME"
         * price="X.XX"
@@ -30,10 +33,10 @@
 
        Example: [add_to_cart product="T-Shirt" price="20" options="Size=Small|Med|Large"]
 
-    3. Add a Shopping Cart using the [checkout_cart] shortcode 
+    4. Add a Shopping Cart using the [checkout_cart] shortcode 
        or <?php echo checkout_cart(); ?>.
 
-    4. Add a link to the shopping cart using the [checkout_cart_link] shortcode 
+    5. Add a link to the shopping cart using the [checkout_cart_link] shortcode 
        or <?php echo checkout_cart_link(); ?>.
     
  * ====================================================================== */

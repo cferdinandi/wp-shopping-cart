@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WordPress Shopping Cart - A simple PayPal shopping cart for WordPress</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="kraken.css" type="text/css">
+
+    <!-- HTML5 Shim for IE 6-8 -->
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+	<section class="space-bottom bg-gray">
+	    <article class="container text-center">
+
+            <h1 class="text-taller no-space-bottom"><i class="icon-logo"></i> WP Shopping Cart</h1>
+            <p class="text-tall text-muted">A simple PayPal shopping cart for WordPress.</p>
+
+	        <p><a class="btn btn-blue btn-jumbo" href="https://github.com/cferdinandi/wp-shopping-cart/archive/master.zip">Download WP Shopping Cart</a></p>
+
+	        <p>
+	            <span class="text-small">
+	                <a href="https://github.com/cferdinandi/wp-shopping-cart"><i class="icon-github"></i> GitHub Project</a>
+	                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	                <a href="#more"><i class="icon-docs"></i> Getting Started</a>
+                </span>
+            </p>
+
+        </article>
+    </section>
+
+	<section class="space-bottom">
+	    <article class="container">
+
+
+	        <h1 class="text-center" id="more">How It Works</h1>
+
+	        <p>WordPress Shopping Cart makes it easy for visitors to:</p>
+
+	        <ul>
+	            <li>Add products to their shopping cart.</li>
+	            <li>Update quantities and remove items.</li>
+	            <li>Calculate shipping based on cart subtotal.</li>
+	            <li>And checkout via PayPal.</li>
+            </ul>
+
+            <p>This is not a plugin. A working knowledge of PHP and WordPress functions is required.</p>
+
+	        <hr>
+
+
+	        <h1 class="text-center">Getting Started</h1>
+
+	        <h2>1. Add Files to Your Theme.</h2>
+
+	        <p>Add <code>wp-shopping-cart.php</code> to your theme folder and call it from your <code>functions.php</code> file, or copy-and-paste it directly into the file.</p>
+
+
+	        <h2>2. Setup Your Variables</h2>
+
+            <p class="space-bottom-small">Replace the variables with your information:</p>
+            <ul>
+                <li><code>$paypal_account</code> - Your PayPal email address</li>
+                <li><code>$cart_icon</code> - An icon for your shopping cart link, if you have one</li>
+                <li><code>$url_store</code> - The URL of your store</li>
+                <li><code>$url_cart</code> - The URL of your shopping cart</li>
+                <li><code>$url_update</code> - The meta info/URL when the cart is updated</li>
+                <li><code>$url_success</code> - The meta info/URL when the checkout is successful</li>
+                <li>Shipping variables - Based on shopping cart subtotal value</li>
+            </ul>
+
+
+	        <h2>3. Create Product Pages</h2>
+
+	        <p>Create pages for your products, and use the <code>[add_to_cart]</code> shortcode to create links.</p>
+
+            <p class="space-bottom-small"><strong>Shortcode variables:</strong></p>
+            <ul>
+                <li>product="PRODUCT NAME"</li>
+                <li>price="X.XX"</li>
+                <li>options="TITLE=OPTION 1|OPTION 2|OPTION 3" (Not required. Limit 1 set of options.)</li>
+                <li>sold="SOLD OUT MESSAGE"</li>
+            </ul>
+
+            <p class="space-bottom-small"><strong>Example:</strong></p>
+            <pre>[add_to_cart product="T-Shirt" price="20" options="Size=Small|Med|Large"]</pre>
+
+
+            <h2>4. Create a Shopping Cart Page</h2>
+
+            <p>Create a shopping cart page, and use the <code>[checkout_cart]</code> shortcode to embed a cart.</p>
+
+
+            <h2>5. Add a Link to the Cart</h2>
+
+            <p>Add a link to the cart anywhere on your site using the <code>[checkout_cart_link]</code> shortcode or <code>&lt;?php echo checkout_cart_link(); ?&gt;</code>.</p>
+
+            <hr>
+
+
+            <h1 class="text-center">What It Looks Like</h1>
+
+	        <p><img src="img/shopping-cart.png" alt="A screenshot of the shopping cart"></p>
+
+	        <hr>
+
+
+	        <h1 class="text-center">Useful Add-Ons</h1>
+
+	        <p>WordPress Shopping Cart was designed to work with the <a href="http://cferdinandi.github.com/kraken/">Kraken boilerplate</a>, <a href="http://cferdinandi.github.io/kraken-for-wordpress/">Kraken for WordPress</a>, and <a href="http://cferdinandi.github.io/tables/">Tables</a>.</p>
+
+	        <p>It should work great with other themes, too. You may just need to adjust the styling a little bit.</p>
+
+        </article>
+	</section>
+
+	<footer class="bg-gray">
+        <article class="container">
+
+            <p class="text-small text-muted text-center">Built by <a href="http://gomakethings.com">Chris Ferdinandi</a>. Free to use under the <a href="http://gomakethings.com/mit/">MIT License</a>.</p>
+
+            <p class="text-small text-muted text-center">WordPress Shopping Cart is an add-on for <a href="http://cferdinandi.github.com/kraken/">Kraken</a>, a lightweight, mobile-first boilerplate for front-end web developers. It works great as a standalone product, too.</p>
+
+        </article>
+	</footer>
+
+</body>
+</html>
