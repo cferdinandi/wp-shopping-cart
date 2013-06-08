@@ -13,7 +13,7 @@
     HOW TO USE
 
     1. Add wp-shopping-cart.php to your theme folder and call it from your functions.php file, 
-       or copy-and-paste it directly into the file.
+       or copy-and-paste it directly into the file. Add the 'img' folder into your theme folder.
 
     2. Replace the variables with your information:
         * $paypal_account - Your PayPal email address
