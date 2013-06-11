@@ -131,10 +131,11 @@ function checkout_cart_shipping() {
 
 
 
+
+
 /* =============================================================
-    FUNCTIONS
-    Creates the shopping cart and add-to-cart buttons.
-    Processes cart actions.
+    START BROWSING SESSION
+    Creates a session for data storage.
  * ============================================================= */
 
 // Start browsing session (for data storage)
@@ -144,7 +145,13 @@ if(!isset($_SESSION)) {
 
 
 
-// "Add to Cart" Button
+
+
+/* =============================================================
+    CREATE ADD TO CART BUTTON
+    Create the "Add to Cart" button.
+ * ============================================================= */
+ 
 function add_to_cart($atts) {
 
     // Set and get product variables
@@ -210,7 +217,13 @@ add_shortcode("add_to_cart", "add_to_cart");
 
 
 
-// "Add to Cart" Action
+
+
+/* =============================================================
+    PROCESS ADD-TO-CART
+    Store data in browser session when "Add to Cart" button is clicked.
+ * ============================================================= */
+ 
 if ($_POST['add-to-cart'] ) {
 
     // Set product variables
@@ -261,7 +274,14 @@ if ($_POST['add-to-cart'] ) {
 
 
 
-// Checkout Cart
+
+
+/* =============================================================
+    CREATE CHECKOUT CART
+    Get data from the browser session and use it to create
+    a shopping cart.
+ * ============================================================= */
+ 
 function checkout_cart() {  
 
     // Checkout Cart Variables
@@ -395,7 +415,14 @@ add_shortcode("checkout_cart", "checkout_cart");
 
 
 
-// "Remove from Cart" Action
+
+
+/* =============================================================
+    PROCESS REMOVE FROM CART
+    Remove an item from the browser session when the
+    "Remove" button is clicked.
+ * ============================================================= */
+ 
 if (stripos($url_current, '?action=remove-from-cart') !== false) {
 
     // If product ID exists in shopping cart...
@@ -417,7 +444,13 @@ if (stripos($url_current, '?action=remove-from-cart') !== false) {
 
 
 
-// "Update Cart" Action
+
+
+/* =============================================================
+    PROCESS UPDATE CART
+    Update the browser session when the "Update" button is clicked.
+ * ============================================================= */
+ 
 if ($_POST['submit'] === 'update-cart' ) {
 
     // For each item in the cart...
@@ -451,7 +484,13 @@ if ($_POST['submit'] === 'update-cart' ) {
 
 
 
-// "Checkout" Action
+
+
+/* =============================================================
+    PROCESS CHECKOUT BUTTON
+    Submit cart info to PayPal for processing.
+ * ============================================================= */
+
 if ($_POST['submit'] === 'cart-checkout' ) {  
 
     // PayPal Variables
@@ -492,7 +531,13 @@ if ($_POST['submit'] === 'cart-checkout' ) {
 
 
 
-// Link To Shopping Cart
+
+
+/* =============================================================
+    CREATE LINK TO CART
+    Create a link to the shopping cart with number of items in cart.
+ * ============================================================= */
+
 function checkout_cart_link() {
 
     // Variables
