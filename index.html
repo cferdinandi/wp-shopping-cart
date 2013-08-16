@@ -55,14 +55,20 @@
 
 	        <h1 class="text-center">How to Use WP Shopping Cart</h1>
 
-	        <h2>1. Add Files to Your Theme.</h2>
+	        <h2>1. Add the shopping cart to your theme.</h2>
 
-	        <p>Add <code>wp-shopping-cart.php</code> to your theme folder and call it from your <code>functions.php</code> file, or copy-and-paste it directly into the file. Add the <code>img</code> folder into your theme folder.</p>
+	        <p>Copy <code>wp-shopping-cart.php</code> to your theme directory. Call the shopping cart in your <code>functions.php</code> file:</p>
+
+            <pre>require_once('wp-shopping-cart.php');</pre>
+
+            <p>Dont' have a <code>functions.php</code> file? Create one, drop it in your theme directory, and add an opening and add opening and closing PHP tags:</p>
+
+            <pre>&lt;?php require_once('wp-shopping-cart.php'); ?&gt;</pre>
 
 
-	        <h2>2. Setup Your Variables</h2>
+	        <h2>2. Configure your settings.</h2>
 
-            <p class="space-bottom-small">Replace the variables with your information:</p>
+            <p class="space-bottom-small">In the <code>wp-shopping-cart.php</code> file, replace these variables with your information:</p>
             <ul>
                 <li><code>$paypal_account</code> - Your PayPal email address</li>
                 <li><code>$cart_icon</code> - An icon for your shopping cart link, if you have one</li>
@@ -74,7 +80,7 @@
             </ul>
 
 
-	        <h2>3. Create Product Pages</h2>
+	        <h2>3. Create product pages.</h2>
 
 	        <p>Create pages for your products, and use the <code>[add_to_cart]</code> shortcode to create links.</p>
 
@@ -90,12 +96,12 @@
             <pre>[add_to_cart product="T-Shirt" price="20" options="Size=Small|Med|Large"]</pre>
 
 
-            <h2>4. Create a Shopping Cart Page</h2>
+            <h2>4. Create a shopping cart page.</h2>
 
             <p>Create a shopping cart page, and use the <code>[checkout_cart]</code> shortcode to embed a cart.</p>
 
 
-            <h2>5. Add a Link to the Cart</h2>
+            <h2>5. Add a link to the cart.</h2>
 
             <p>Add a link to the cart anywhere on your site using the <code>[checkout_cart_link]</code> shortcode or <code>&lt;?php echo checkout_cart_link(); ?&gt;</code>.</p>
 
