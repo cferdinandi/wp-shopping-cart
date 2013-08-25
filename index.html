@@ -26,7 +26,7 @@
 	            <span class="text-small">
 	                <a href="https://github.com/cferdinandi/wp-shopping-cart"><i class="icon-github"></i> GitHub Project</a>
 	                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	                <a href="#more"><i class="icon-docs"></i> Getting Started</a>
+	                <a class="scroll" data-speed="300" href="#more"><i class="icon-docs"></i> Getting Started</a>
                 </span>
             </p>
 
@@ -59,11 +59,11 @@
 
 	        <p>Copy <code>wp-shopping-cart.php</code> to your theme directory. Call the shopping cart in your <code>functions.php</code> file:</p>
 
-            <pre>require_once('wp-shopping-cart.php');</pre>
+            <pre><code class="language-php">require_once('wp-shopping-cart.php');</code></pre>
 
             <p>Dont' have a <code>functions.php</code> file? Create one, drop it in your theme directory, and add an opening and add opening and closing PHP tags:</p>
 
-            <pre>&lt;?php require_once('wp-shopping-cart.php'); ?&gt;</pre>
+            <pre><code class="language-php">&lt;?php require_once('wp-shopping-cart.php'); ?&gt;</code></pre>
 
 
 	        <h2>2. Configure your settings.</h2>
@@ -93,7 +93,7 @@
             </ul>
 
             <p class="space-bottom-small"><strong>Example:</strong></p>
-            <pre>[add_to_cart product="T-Shirt" price="20" options="Size=Small|Med|Large"]</pre>
+            <pre><code class="language-php">[add_to_cart product="T-Shirt" price="20" options="Size=Small|Med|Large"]</code></pre>
 
 
             <h2>4. Create a shopping cart page.</h2>
@@ -133,6 +133,8 @@
 
         </article>
 	</footer>
+
+    <script src="js/kraken.js"></script>
 
 </body>
 </html>
