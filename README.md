@@ -1,6 +1,8 @@
 # WordPress Shopping Cart
 A simple PayPal shopping cart for WordPress.
 
+***Note:*** *This plugin is not tested or maintained. It was an experiment and should not be used as-is.*
+
 ## How It Works
 Getting started with WordPress Shopping Cart is really easy. [View the online tutorial](http://cferdinandi.github.io/wp-shopping-cart/) or dig through the `wp-shopping-cart.php` file.
 
