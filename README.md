@@ -1,7 +1,7 @@
-# WordPress Shopping Cart
-A simple PayPal shopping cart for WordPress.
-
+# [DEPRECATED - DO NOT USE] WordPress Shopping Cart
 ***Note:*** *This plugin is not tested or maintained. It was an experiment and should not be used as-is.*
+
+A simple PayPal shopping cart for WordPress.
 
 ## How It Works
 Getting started with WordPress Shopping Cart is really easy. [View the online tutorial](http://cferdinandi.github.io/wp-shopping-cart/) or dig through the `wp-shopping-cart.php` file.
@@ -18,4 +18,5 @@ Getting started with WordPress Shopping Cart is really easy. [View the online tu
   * Initial release.
 
 ## License
-WordPress Shopping Cart is free to use under the [MIT License](http://gomakethings.com/mit/).
+
+The code is available under the [MIT License](LICENSE.md).
